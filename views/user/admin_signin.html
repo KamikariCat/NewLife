@@ -1,0 +1,246 @@
+    <div id="primary">
+        <div id="wrap-user-avatar">
+            <div id="border-div"></div>
+            <div id="wrap-user-img">
+                <img src="files/barn.jpg" alt="barn.jpg" class="user-avatar" />
+                <form method="post" enctype="multipart/form-data">
+                    <div id="coad-column1">
+                        <input type="file" name="fileToUpload"  name="choose-img">
+                        <p>Выбрать</p>
+                    </div>
+                    <div id="load-column2">
+                        <input type="submit"  name="load-avatar">
+                        <p>Загрузить</p>
+                    </div>
+                </form>
+            </div>
+            <div id="user-self-menu">
+                <table>
+                    <tr>
+                        <td><span class="green-text iden"></span></td>
+                        <td><a href="">Друзья</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="green-text iden"></span></td>
+                        <td><a href="">Сообщения</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="green-text iden"></span></td>
+                        <td><a href="">Музыка</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="green-text iden"></span></td>
+                        <td><a href="">Фениксы</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="yellow-text iden"></span></td>
+                        <td><a href="">Настройки</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="yellow-text iden"></span></td>
+                        <td><a><span class='green-text'>Регистрация феникса</span></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+                <div class="userInfoOnPage">
+                        <span id="user-page-title">
+                            <span id="info-for-phoenix">&#187; Информация о фниксе</span>
+                            <span id="info-for-pers">Информация о персонаже &#171;</span>
+                        </span><br>
+
+                    <div id="column1">
+                        <table method="post">
+                            <tr>
+                                <td>
+                                    <p>
+                                        <strong>логин</strong>
+                                    </p>
+                                </td>
+                                <td>
+                                        <p><input type="text" id="sign-in-text-forms" readonly <?='value="'.$data['generator']['login'].'"'?>></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><strong>пароль</strong></p>
+                                </td>
+                                <td>
+                                    <p><input type="text" id="sign-in-text-forms" readonly <?='value="'.$data['generator']['password'].'"'?>></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><strong>имя</strong></p>
+                                </td>
+                                <td>
+                                    <p><?php if (Session::get('active') == '0') {
+                                            echo "<span class='red-text'>Не активен</span>";
+                                        }else {
+                                            echo "<span class='green-text'>Активен</span>";
+                                        }
+                                ?></p>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><strong>день рождения</strong></p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <?php
+                                            if (Session::get('block') == '00') {
+                                                echo 'Нету';
+                                            } else{
+                                                echo "<span class='red-text'>Бан</span>";
+                                            }
+                                        ?>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><strong>пол</strong></p>
+                                </td>
+                                <td>
+                                    <p><?=Session::get('name')?></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="column2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <p class="userPageImdeator"><?=Session::get('nickname')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>имя в идеальном мире</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="userPageImdeator"><?=Session::get('position')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>должность в гильдии</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="userPageImdeator"><?=Session::get('race')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>раса персонажа</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="userPageImdeator"><?=Session::get('class')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>класс персонажа</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="userPageImdeator"><?=Session::get('level')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>текущий уровень</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <?php
+                                            if (Session::get('characterSex') == '0') {
+                                                echo "Мужской";
+                                            }elseif(Session::get('characterSex') == '1'){
+                                                echo "Женский";
+                                            }else{
+                                                echo null;
+                                            }
+                                        ?>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p><strong>пол персонажа</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><?=Session::get('h/w')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>
+                                        <?php
+                                            if (Session::get('characterSex') == '0') {
+                                                echo "женат на";
+                                            }elseif(Session::get('characterSex') == '1'){
+                                                echo "замужем за";
+                                            }else{
+                                                echo null;
+                                            }
+                                        ?>
+                                    </strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="userPageImdeator"><?=Session::get('dateofadd')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>
+                                        <?php
+                                            if (Session::get('characterSex') == '0') {
+                                                echo "Вступил в гильдию";
+                                            }elseif(Session::get('characterSex') == '1'){
+                                                echo "Вступила в гильдию";
+                                            }else{
+                                                echo null;
+                                            }
+                                        ?>
+                                    </strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="userPageImdeator"><?=Session::get('otherCharacters')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>Второстепенные персонажи</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="userPageImdeator"><?=Session::get('reborn')?></p>
+                                </td>
+                                <td>
+                                    <p><strong>Перерождение</strong></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div> <!-- End column1 -->
+                </div>
+            </div>

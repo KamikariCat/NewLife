@@ -1,0 +1,521 @@
+@font-face{
+    src: url(/res/fonts/favorit.ttf);
+    font-family: Favorit;
+}
+.chat-text{
+    background: url(images/form-text.jpg) repeat-x;
+    color: #5b5a4e;
+    width: 313px;
+    font-family: arial, verdana, sans-serif;
+    font-size: 11px;
+    border: none;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    padding: 6px 10px;
+}
+.admin_chat_message{
+    color: #f00;
+}
+.System_chat_message{
+    color: #0f0;
+    text-shadow: 0px 0px 3px #000;
+}
+#CHAT{
+    background: url(images/form-text.jpg) repeat-x bottom #f0e4c5;
+    color: #5b5a4e;
+    width: 398px;
+    height: 252px;
+    margin-bottom:5px; 
+    font-family: arial, verdana, sans-serif;
+    font-size: 13px;
+    border: none;
+    overflow: auto;
+    word-wrap: break-word;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    padding: 6px 10px;
+    resize: none;
+}
+.chat-text{
+    background: url(images/form-text.jpg) repeat-x;
+    color: #5b5a4e;
+    width: 313px;
+    font-family: arial, verdana, sans-serif;
+    font-size: 11px;
+    border: none;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    padding: 6px 10px;
+}
+.chat-submit{
+    text-decoration: none;
+    font-family: Georgia, Palatino, serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    height: 27px;
+    width: 81px;   
+    text-align: center; 
+    border: none;
+    background: url(images/navigation-hover.jpg) no-repeat;
+    color: #b3b496;
+}
+#navigation .search input.form-submit:hover { 
+    cursor: pointer;
+    color: #E8D4AF;
+}
+#position_point{
+	position: absolute;
+}
+#navigation{
+	width: 100%;
+	height: 50px;
+}
+#navigation ul{
+	width: 450px;
+	height: 27px;
+	float: left;
+}
+#userHeadInfo{
+	width: 450px;
+	height: 50px;
+	float: right;
+}
+#exit_acc_formsubmit{
+	float: right;
+}
+#userHeadInfoText{
+	width: 150px;
+	height: 43px;
+	float: left;
+	margin-left: 170px;
+	font-family: Favorit;
+	font-size: 25px;
+	position: relative;
+	color: #e8d4af;
+	top: -13px;
+}
+#userHeadInfoText a{
+	font-family: Favorit;
+	text-decoration: none;
+	text-transform: none;
+	color: #e8d4af;
+	-webkit-transition: all .3s;
+	   -moz-transition: all .3s;
+	    -ms-transition: all .3s;
+	     -o-transition: all .3s;
+	        transition: all .3s;
+}
+#selfUserClass{
+	font-family: Favorit;
+	text-align: right;
+	text-shadow: 0px 0px 5px #fff;
+}
+/* #selfUserClass:hover{
+	text-shadow: 0px 0px 5px #000;
+} */
+#userHeadInfoText a{
+	text-shadow: 0px 0px 5px #000;
+}
+#userHeadInfoText a:hover{
+	text-shadow: 0px 0px 5px #fff;
+}
+#oneUserPartInfo{
+	height: 100%;
+	float: left;
+}
+#twoUserPartInfo{
+	height: 100%;
+	float: right;
+}
+#phoenix{
+	position: relative;
+	left: -30px;
+    bottom: -9px;
+	z-index: 3;
+}
+#wraper{
+	width: 1200px;
+	max-width: 1200;
+	min-width: 1200;
+	height: auto;
+	margin: 0px auto;
+}
+#pero{
+	position: fixed;
+	z-index: 0;
+	right: 0px;
+	bottom: 0px;
+}
+#pero img{
+	width: 156px;
+	max-width: 157px;
+	height: 156px;
+	max-height: 157px;
+}
+#pero img:hover{
+	cursor: pointer;
+	width: 157px;
+	height: 157px;
+}
+#primary, #navigation li{
+	position: relative;
+	z-index: 4;
+}
+#phoenix img{
+	width: 250px;
+	height: 350px;
+}
+/* #law{
+	position: relative;
+	z-index: 5;
+} */
+/* @media screen and (max-device-width: 1300px) {
+   #phoenix {display: none;}
+} */
+/* #user-title{
+	width: 200px;
+	font-weight: normal;
+	color: #d1a773;
+	font-family: Georgia, Palatino, serif;
+	font-size: 15	px;
+	text-shadow: 0px 0px 10px #000;
+}
+ */#user-page-title{
+	color: #b3b496;
+	font-family: Georgia, Palatino, serif;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin: 10px 0;
+	display: block;
+	font-weight: normal;
+}
+#info-for-phoenix{
+	display: block;
+	float: left;
+}
+#info-for-pers{
+	display: block;
+	float: right;
+}
+#wrap-user-avatar{
+	float: right;
+	width: 210px;
+	height: auto;
+}
+#wrap-user-avatar hr{
+	width: 180px;
+	margin:10px auto;
+}
+#wrap-user-avatar .form-text{
+	background: url(images/form-text.jpg) repeat-x;
+    color: #5b5a4e;
+    font-family: arial, verdana, sans-serif;
+    font-size: 11px;
+    margin-top: 5px;
+    border: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 6px 10px;
+}
+#change-login{
+	width: 150px;
+	height: 90px;
+	margin: 0px auto;
+}
+#border-div{
+	height: 215px;
+    border-left: 1px dotted #8a8571;
+    float: left;
+    position: absolute;
+    margin-top: 239px;
+}
+#change-password{
+	width: 150px;
+	height: 150px;
+	margin: 0px auto;
+}
+#change-login .form-submit, #change-password .form-submit{
+	text-decoration: none;
+    font-family: Georgia, Palatino, serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    height: 27px;
+    margin-top: 5px;
+    width: 81px;
+    text-align: center;
+    border: none;
+    background: url(images/navigation-hover.jpg) no-repeat;
+    color: #b3b496;
+}
+#activate_account_btn{
+	text-decoration: none;
+    font-family: Georgia, Palatino, serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    height: 27px;
+    margin-top: 5px;
+    width: 120px;
+    text-align: center;
+    border: none;
+    background-color: #727061;
+    border-radius: 5px;
+    color: #b3b496;
+}
+#activate_account_btn:hover{
+	cursor: pointer;
+	color: #e8d4af;
+}
+#change-login .form-submit:hover, #change-password .form-submit:hover{
+	cursor: pointer;
+	color: #badee1
+}
+
+.user-avatar{
+	width: 200px;
+	/* height: 200px; */
+}
+.user-hr{
+	width: 200px;
+	margin: 10px auto;
+}
+.userInfoOnPage{
+	width: 740px;
+	text-align: right;
+	padding-right: 5px;
+}
+.userInfoOnPage input{
+	text-align: center;
+}
+.userInfoOnPage #column2 table{
+	float: right;
+    margin: 10px auto;
+    width: 370px;
+	border-left: 1px dotted #8a8571;
+}
+.userInfoOnPage #column2 table td{
+	vertical-align: middle;
+	text-align: right;
+}
+.userInfoOnPage #column2 table tr{
+		border-bottom: 1px dotted #8a8571;
+}
+.userInfoOnPage #column2 table tr :first-child p{
+	text-align: center;
+	vertical-align: middle;	
+}
+
+.userInfoOnPage #column1 table{
+	float: left;
+	width: 370px;
+	border-bottom: 1px dotted #8a8571;
+	margin-top: 10px;
+	width: 370px;
+}
+.userInfoOnPage tr{
+	height: 30px;
+}
+.userInfoOnPage #column1 table tr :first-child p{
+	text-align: left;
+}
+.userInfoOnPage #column1 table tr{
+	border-bottom: 1px dotted #8a8571;
+}
+.userInfoOnPage #column1 table tr :last-child p{
+	text-align: center;
+}
+.userInfoOnPage #column1 table td{
+	vertical-align: middle;
+	text-align: left;
+}
+.userInfoOnPage #column1 p{
+	margin-bottom: 0px;
+}
+.userInfoOnPage #column2 p{
+	margin-bottom: 0px;
+}
+#mform-submit{
+	text-decoration: none;
+    font-family: Favorit;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    height: 27px;
+    text-align: center;
+    border: none;
+    margin: 5px -62px;
+    background-color: rgba(0,0,0,.0);
+    color: #e8d4af;
+}
+#mform-submit:hover{
+	cursor: pointer;
+}
+.userInfoOnPage #column1 table td input{
+	    background: url(images/form-text.jpg) repeat-x;
+	    color: #5b5a4e;
+	    font-family: arial, verdana, sans-serif;
+	    font-size: 11px;
+	    width: 130px;
+	    height: 10px;
+	    border: none;
+	    -moz-border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    padding: 6px 10px;
+}
+
+.userInfoOnPage #column2 table td input{
+	    background: url(images/form-text.jpg) repeat-x;
+	    color: #5b5a4e;
+	    font-family: arial, verdana, sans-serif;
+	    font-size: 11px;
+	    width: 130px;
+	    height: 10px;
+	    border: none;
+	    -moz-border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    padding: 6px 10px;
+}
+.userInfoOnPage #column1 table td select{
+	background: url(images/form-text.jpg) repeat-x;
+    color: #5b5a4e;
+    font-family: arial, verdana, sans-serif;
+    font-size: 11px;
+    width: 55px;
+    font-size: 13px;
+    height: 26px;
+    border: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 0px 10px;
+}
+.userInfoOnPage #column2 table td select{
+	background: url(images/form-text.jpg) repeat-x;
+    color: #5b5a4e;
+    font-family: arial, verdana, sans-serif;
+    font-size: 11px;
+    width: 95px;
+    font-size: 13px;
+    height: 26px;
+    border: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 0px 10px;
+}
+.userInfoOnPage #column2{
+	width: 370px;
+	/* border-left: 1px dotted #8a8571; */
+	float: right; 	
+}
+.userInfoOnPage #column2 #user-page-title{
+	margin-bottom: 5px;
+}
+/* Colors of text*/
+.red-text{
+	color: #f00;
+}
+.green-text{
+	color: #0f0;
+}
+.yellow-text{
+	color: yellow;
+}
+.shadow-text{
+	text-shadow: 0px 0px 5px #000;	
+}
+/*user images*/
+#wrap-user-img form{
+	width: 208px;
+	height: 30px;
+	display: block;
+	opacity: 0;
+	position: relative;
+	margin: -34px auto 0px auto;
+	background-color: #454439;
+	-webkit-transition: opacity .5s;
+	   -moz-transition: opacity .5s;
+	    -ms-transition: opacity .5s;
+	     -o-transition: opacity .5s;
+	        transition: opacity .5s;
+}
+#wrap-user-img form p{
+	text-align: center;
+	width: 105px;
+	color: #8a8571;
+	display: block;
+	font-size: 22px;
+	height: 15px;
+	font-family: Favorit;
+	margin-top: -20px;
+}
+#wrap-user-img form input{
+	opacity: 0;
+}
+#wrap-user-img form:hover{
+	cursor: pointer;
+	opacity: 1;
+}
+#wrap-user-img form :first-child{
+	float: left;
+	height: 100%;
+	border-right: 1px dotted #8a8571;
+	width: 102px;
+}
+#wrap-user-img form :last-child{
+	float: right;
+	height: 100%;
+	width: 104px;
+}
+/*	 user-menu	*/
+
+#user-self-menu{
+	width: 200px;
+	margin: 15px auto 15px auto;
+}
+#user-self-menu table{
+	font-family: Favorit;
+	width: 150px;
+	margin: 0px auto;
+}
+#user-self-menu table tr .iden{
+	display: block;
+	width: 20px;
+	font-size: 20px;
+}
+#user-self-menu table tr a{
+	font-size: 25px;
+	display: block;
+	text-align: content
+}
+#user-self-menu table tr{
+	padding-right: 5px;
+	text-align: center;
+}
+#user-self-menu a{
+	color: #e8d4af;
+	font-size: 25px;
+		
+}
+#user-self-menu a:hover, #user-self-menu a span:hover{
+	text-shadow: 0px 0px 5px #05f;
+}
+a {
+    color: #a2ccd0;
+    text-decoration: none;
+}
+
+/*	 user-menu	*/
+
+/*Footer ==============================    */
+
+#footer p {
+    padding: 10px 0;
+    color: #b3b496;
+    margin: 0px auto;
+    font-family: Georgia, Palatino, serif;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 1.5px;
+}

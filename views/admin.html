@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>New Life</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta property="og:title" content="New Life"/>
+    <meta property="og:description" content="New Life Guild"/>
+    <meta property="og:image" content="https://pp.vk.me/c633716/v633716282/31a7c/rMKdK7M4ie4.jpg" />
+    <link rel="stylesheet" href="jquery.mCustomScrollbar.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/all.css" />
+    <link href="/css/reset.css" media="all" rel="stylesheet" type="text/css" />
+    <?App::getStyleOne()?>
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css" />
+    <script type="text/javascript" src="js/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('.pngfix'); </script>
+    <![endif]--> 
+    
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.innerfade.js"></script>
+    
+    <script type="text/javascript">
+       $(document).ready(
+                function(){
+                    $('#fade').innerfade({
+                        animationtype: 'fade',
+                        speed: 'slow',
+                        timeout: 2000,
+                        type: 'sequence',
+                        containerheight: '261px',
+                        runningclass: 'innerfade'
+                    });          
+            });
+      </script>
+</head>
+
+<body 
+<?
+    if (App::getRouter()->getController() == 'news') {
+        echo "class='news'";
+    }elseif (App::getRouter()->getController() == 'sales') {
+        echo "class='sales'";
+    }elseif(App::getRouter()->getController() == 'main'){
+        echo "class='front'";
+    }else{
+        echo "";
+    }
+    ?>
+>
+    <div id="position_point"></div>
+<div class="top-bar"></div><!--End top-bar -->
+<div id="wraper">
+    <div id="phoenix">
+        <img src="/files/phoenix.png" alt="" />
+    </div>
+<div id="container">
+    
+     <?App::getViewPath()?>
+
+    <hr /> 
+     <div class="clear-block"></div>
+    </div><!--End bottom-container-->
+    </div>
+    <div id="footer">
+        <p> Meow ^^</p>
+    </div><!--End footer -->
+</div> <!--End container -->
+<div id="pero">
+    <img src="/files/pero.png" alt="" />
+</div>
+</body>
+
+</html>

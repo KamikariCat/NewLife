@@ -1,0 +1,116 @@
+<div id="header">
+        <span class="newlife">New Life</span>
+        <div id="navigation">
+            <ul>
+                <li><a href="/main">Главная</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/oficers">Офицеры</a></li>
+                <li class="this-page-on"><a href="/news">События</a></li>
+                <li><a href="/law">Устав</a></li>
+            </ul>
+            <div class="search">
+                <?=getLogin()?>
+            </div><!--End search  -->
+        </div><!--End navigation -->
+    </div><!--End header -->
+    
+    <div id="primary">
+            <h3>&#187; Новости, ивенты, события гильдии New Life</h3>
+            <h1 class="page-title">Последние новости</h1>                            
+            <div class="column-1">
+            
+                <div class="item">
+                    <img src="/res/kh1.jpg" width="300px" class="img-left" alt="spruce meadows" />
+                    <h2>КХ ивент!</h2>
+                    <p class="submitted">Опубликовано 18 сентября 2016 года.<br />
+                    <a href="#"><abbr title="Мастер гильдии New Life">HikoSeijuro</abbr></a></p>
+                    <p>На этой неделе будет возобновлён регулярный ивент на базе гильдии.</p>
+                    <p>Ивент будет проводиться начиная с понедельника в 20:00.
+                        19 сентября будет проведён первый этап. <abbr class="red-text shadow-text">БЫТЬ ВСЕМ!</abbr></p>
+                    <p>Желательно перед началом просмотреть гайд по первому этапу ивета</p>
+                    <p>Перед началом необходимо зайти в <abbr class="yellow-text" title="RaidCall">RC. </abbr>У кого он не утсановлен, убедительная просьба скачать его с <a href="http://www.raidcall.com.ru/download.html">оффициального сайта. </a>Версию программы выбирайте на своё усмотрение.</p>
+                </div>
+            
+            </div><!--End column-1  -->
+            
+            <div class="column-2">
+                <h2>Архив</h2>
+                <ul>
+                    <li><a>2016</a></li>
+                </ul>
+                
+                <h2>Категория</h2>
+                <ul>
+                    <li><a>Ивенты</a></li>
+                </ul>
+                
+            </div><!--End column-2  -->
+            
+    </div><!--End primary -->
+    
+    <div class="clear-block"></div>
+    
+    <div id="bottom-container">
+    <div id="secondary">
+        <div class="inside">
+            <h3>&#187; Чат</h3>
+            <p>
+                <div id="CHAT">
+                        <span>
+                        <?php
+                            $text_message = $data['chat']['messages'];
+                            foreach ($text_message as $key => $value) {
+                                if (verMemberInChat(addslashes($text_message[$key]['nickname']))) {
+                                    echo '<span class="red-text">'.htmlspecialchars($text_message[$key]['nickname']).':</span> '.htmlspecialchars($text_message[$key]['message']).'<br>'."\n";
+                                }elseif($text_message[$key]['nickname'] == 'System'){
+                                    echo '<span class="System_chat_message">'.htmlspecialchars($text_message[$key]['nickname']).':</span> '.htmlspecialchars($text_message[$key]['message']).'<br>'."\n";
+                                }else{
+                                    echo htmlspecialchars($text_message[$key]['nickname']).': '.htmlspecialchars($text_message[$key]['message']).'<br>'."\n";
+                                }
+                            }
+                        ?>
+                        </span>
+                </div>
+                <script>
+                window.onload = function(){
+                        document.getElementById('CHAT').scrollTop = 9999;
+                    }
+                </script>
+            </p>
+            <p>
+                <?php
+                if (Session::get('active') !== '0') {
+                    echo '
+                <form method="post" id="chatform">
+                    <input type="text" autocomplete="off" name="message" maxlength="300" placeholder="Сообщение" class="chat-text" />
+                    <input type="submit" value="Отправить" onclick="send_chat_message();" name="send_chat_message" class="chat-submit"/>
+                </form>
+            ';
+                }else {
+                    echo "<p><strong class='yellow-text'>Вы не можете отправлять сообщения в чате. Ваш аккаунт не активирован. Перейдите в личный кабинет и активируйте его</strong></p>";
+                }
+            ?>
+            <script>
+                function call(){
+                    var msg = $('#chatform').serialize();
+                    $.ajax({
+                        type: 'POST',
+                        data: 'msg',
+                        seccess: function(data){
+                            $('#CHATspan').html(data);
+                        },
+                    });
+                }
+            </script>
+            </p>
+        </div><!--End inside -->
+    </div><!--End secondary --> 
+    
+    <div id="tertiary">
+        <div class="inside"> 
+            <h3>&#187; Последние новости</h3>
+            <h2><a href="#">КХ ивент!</a></h2><p>Перед началом необходимо зайти в RC. У кого он не утсановлен, убедительная просьба скачать его с оффициального сайта. Версию программы выбирайте на своё усмотрение.</p>
+            <hr />
+            <p class="view-more"><a href="#">Не тыкать! &#187;</a></p> 
+        </div><!--End inside --> 
+    </div><!--End secondary -->

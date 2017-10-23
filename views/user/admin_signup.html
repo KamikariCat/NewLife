@@ -1,0 +1,291 @@
+<div id="header">
+        <span class="newlife">New Life</span>
+        <!-- <h1 class="site-logo"><a href="/main" class="pngfix">Paragon Stables</a></h1> -->
+        <div id="navigation">
+            <ul>
+                <li><a href="/main">Главная</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/oficers">Офицеры</a></li>
+                <li><a href="/news">События</a></li>
+                <li><a href="/law">Устав</a></li>
+            </ul>
+            <div class="search">
+                <?=getLogin()?>
+            </div><!--End search  -->
+        </div><!--End navigation -->
+    </div><!--End header -->
+            <div id="primary">
+        <div id="wrap-user-avatar">
+            <div id="border-div"></div>
+            <div id="wrap-user-img">
+                 <?php
+                     echo " <img src='/upload/users/".Session::get('id')."/avatar/".Session::get('avatar')."' class='user-avatar' alt=''> ";
+                ?>
+                <form method="post" enctype="multipart/form-data">
+                    <div id="coad-column1">
+                        <input type="file" name="fileToUpload"  name="choose-img">
+                        <p>Выбрать</p>
+                    </div>
+                    <div id="load-column2">
+                        <input type="submit"  name="load-avatar">
+                        <p>Загрузить</p>
+                    </div>
+                </form>
+            </div>
+            <div id="user-self-menu">
+                <table>
+                    <tr>
+                        <td><span class="green-text iden"></span></td>
+                        <td><a href="">Друзья</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="green-text iden"></span></td>
+                        <td><a href="">Сообщения</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="green-text iden"></span></td>
+                        <td><a href="">Музыка</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="green-text iden"></span></td>
+                        <td><a href="">Фениксы</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="yellow-text iden"></span></td>
+                        <td><a href="">Настройки</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="yellow-text iden"></span></td>
+                        <td><a><span class='green-text'>Регистрация феникса</span></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+                <div class="userInfoOnPage">
+                        <span id="user-page-title">
+                            <span id="info-for-phoenix">&#187; Информация о фниксе</span>
+                            <span id="info-for-pers">Информация о персонаже &#171;</span>
+                        </span><br>
+                    <form method="post">
+                    <div id="column1">
+                        <table method="post">
+                            <tr>
+                                <td>
+                                    <p>
+                                        <strong>логин</strong>
+                                    </p>
+                                </td>
+                                <td>
+                                        <input name="NUlogin" type="text" id="register-admin-text" <?="value='".$data['generator']['login']."'"?> class="form-text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><strong>пароль</strong></p>
+                                </td>
+                                <td>
+                                    <input name="NUpassword" type="text" id="register-admin-text" <?="value='".$data['generator']['password']."'"?> class="form-text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><strong>имя</strong></p>
+                                </td>
+                                <td>
+                                    <input name="NUname" placeholder="Имя" type="text">
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><strong>день рождения</strong></p>
+                                </td>
+                                <td>
+                                    <input name="NUbirthday" type="date">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><strong>пол</strong></p>
+                                </td>
+                                <td>
+                                    <select name="NUsex">
+                                        <option value="0">М</option>
+                                        <option value="1">Ж</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>.</p></td>
+                                <td><p>.</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="column2">
+                        <table>
+                            <tr>
+                                <td>
+                                        <input name="NUnickname" type="text" placeholder="Имя персонажа">
+                                </td>
+                                <td>
+                                    <p><strong>имя в идеальном мире</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   
+                                        <select name="NUposition">
+                                            <option value='Член'>Член</option>
+                                            <option value='Капитан'>Капитан</option>
+                                            <option value='Майор'>Майор</option>
+                                            <option value='Маршал'>Маршал</option>
+                                        </select>
+                                    
+                                </td>
+                                <td>
+                                    <p><strong>должность в гильдии</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                        <input name="NUrace" type="text" placeholder="Раса персонажа">
+                                   
+                                </td>
+                                <td>
+                                    <p><strong>раса персонажа</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                        <input name="NUclass" type="text" placeholder="Класс персонажа">
+                                   
+                                </td>
+                                <td>
+                                    <p><strong>класс персонажа</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                        <input name="NUlevel" type="text" placeholder="Уровень">
+                                    
+                                </td>
+                                <td>
+                                    <p><strong>текущий уровень</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                        <select name="NUcharacterSex">
+                                            <option value="0">М</option>
+                                            <option value="1">Ж</option>
+                                        </select>
+                                    
+                                </td>
+                                <td>
+                                    <p><strong>пол персонажа</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                        <input type="text" placeholder="Ник супруга(и)" name="NUmarried">
+                                    
+                                </td>
+                                <td>
+                                    <p><strong>
+                                        жена / муж
+                                    </strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" name="NUdateoffadd">
+                                </td>
+                                <td>
+                                    <p><strong>
+                                         вступление в гильдию
+                                    </strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                        <input type="text" placeholder="Имена твинов" name="NUotherCharacters">
+                                    
+                                </td>
+                                <td>
+                                    <p><strong>Второстепенные персонажи <br> (через запятую)</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                        <select name="NUreborn">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    
+                                </td>
+                                <td>
+                                    <p><strong>Перерождение</strong></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div><!-- End column1 -->
+                    <input style="bisplay:block" id="mform-submit" type="submit" name="signup_btn" value="Регистрация">
+                    </form>
+                </div>
+            </div>    
+    <div class="clear-block"></div>
+    
+    <div id="bottom-container">
+    <div id="secondary">
+        <div class="inside">
+            <h3>&#187; Current Residents</h3>
+            <div class="column">
+                <div class="item"><img src="/files/residents/1.jpg" alt="Resident 1" /><h4><a href="#">UVM Flash</a></h4><p>16.1hh Morgan Stallion</p></div><!--End item-->
+                <div class="item"><img src="/files/residents/2.jpg" alt="Resident 2" /><h4><a href="#">Anacacho Breeze</a></h4><p>16.3hh Saddlebred Mare</p></div><!--End item--> 
+                <div class="item"><img src="/files/residents/3.jpg" alt="Resident 3" /><h4><a href="#">SIH Surprise Bess</a></h4><p>15.3hh Morgan Mare</p></div><!--End item-->  
+                <div class="item"><img src="/files/residents/4.jpg" alt="Resident 4" /><h4><a href="#">Navaduur</a></h4><p>17.2hh Hanoverian Stallion</p></div><!--End item--> 
+            </div><!--End column-->
+            
+            <div class="column">
+                <div class="item"><img src="/files/residents/5.jpg" alt="Resident 5" /><h4><a href="#">Sinclaire</a></h4><p>16.1hh Dutch Warmblood Mare</p></div><!--End item--> 
+                <div class="item"><img src="/files/residents/6.jpg" alt="Resident 6" /><h4><a href="#">Antiquity</a></h4><p>16.1hh AWS Mare</p></div><!--End item-->       
+                <div class="item"><img src="/files/residents/7.jpg" alt="Resident 7" /><h4><a href="#">Kongur fra Stora Hof</a></h4><p>14.3hh Icelandic Stallion</p></div><!--End item-->   
+                <div class="item"><img src="/files/residents/8.jpg" alt="Resident 8" /><h4><a href="#">Skips KID</a></h4><p>15.2hh AQHA Stallion</p></div><!--End item-->      
+            </div><!--End column-->
+            <div class="clear-block"></div>
+            <p class="view-more"><a href="#">View More &#187;</a></p>
+        </div><!--End inside -->
+    </div><!--End secondary --> 
+    
+    <div id="tertiary">
+        <div class="inside"> 
+            <h3>&#187; Recent News</h3>
+            <h2><a href="#">New Website</a></h2><p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. </p>
+            <hr />
+            <h2><a href="#">Other Headlines</a></h2><p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.</p> 
+            <p class="view-more"><a href="#">All Posts &#187;</a></p> 
+        </div><!--End inside --> 
+    </div><!--End secondary -->

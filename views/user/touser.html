@@ -1,0 +1,239 @@
+<div id="primary">
+    <div id="wrap-user-avatar">
+        <div id="border-div"></div>
+        <div id="wrap-user-img">
+            <?php
+                echo '<img src="'.DS.'upload'.DS.'users'.DS.$data['id'].DS.'avatar'.DS.$data['avatar'].'" alt="'.Session::get('name').'" class="user-avatar" />';
+            ?>
+        </div>
+        <!--    Messages to user & other    -->
+    </div>
+			<div class="userInfoOnPage">
+                    <span id="user-page-title">
+                        <span id="info-for-phoenix">&#187; Информация о фниксе</span>
+                        <span id="info-for-pers">Информация о персонаже &#171;</span>
+                    </span><br>
+                <div id="column1">
+                    <table>
+                        <tr>
+                            <td>
+                                <p><strong>статус пользователя</strong></p>
+                            </td>
+                            <td>
+                                <p><?=$data['member']?></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>имя</strong></p>
+                            </td>
+                            <td>
+                                <p><?=$data['name']?></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>день рождения</strong></p>
+                            </td>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['birthday']?></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>
+                                    <?php
+                                        if ($data['sex'] == '0') {
+                                            echo "Стал фениксом";
+                                        }elseif($data['sex'] == '1'){
+                                            echo "Стала фениксом";
+                                        }else{
+                                            echo null;
+                                        }
+                                    ?>
+                                </strong></p>
+                            </td>
+                            <td>
+                                <p><?=$data['fenixdate']?></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>семейное положение</strong></p>
+                            </td>
+                            <td>
+                                <p><span class="yellow-text">Вас не должно это волновать :)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>.</p>
+                            </td>
+                            <td>
+                                <p>.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>.</p>
+                            </td>
+                            <td>
+                                <p>.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>.</p>
+                            </td>
+                            <td>
+                                <p>.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>.</p>
+                            </td>
+                            <td>
+                                <p>.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>.</p>
+                            </td>
+                            <td>
+                                <p>.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="column2">
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['nickname']?></p>
+                            </td>
+                            <td>
+                                <p><strong>имя в идеальном мире</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['position']?></p>
+                            </td>
+                            <td>
+                                <p><strong>должность в гильдии</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['race']?></p>
+                            </td>
+                            <td>
+                                <p><strong>раса персонажа</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['class']?></p>
+                            </td>
+                            <td>
+                                <p><strong>класс персонажа</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['level']?></p>
+                            </td>
+                            <td>
+                                <p><strong>текущий уровень</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <?php
+                                        if ($data['characterSex'] == '0') {
+                                            echo "Мужской";
+                                        }elseif($data['characterSex'] == '1'){
+                                            echo "Женский";
+                                        }else{
+                                            echo null;
+                                        }
+                                    ?>
+                                </p>
+                            </td>
+                            <td>
+                                <p><strong>пол персонажа</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <?php 
+                                        if (!empty($data['h/w'])){
+                                            echo $data['h/w'];
+                                        }else{
+                                            if ($data['characterSex'] == '0') {
+                                                echo "Не женат";
+                                            }elseif($data['characterSex'] == '1'){
+                                                echo "Не замужем";
+                                            }else{
+                                                echo null;
+                                            }
+                                        }
+                                    ?>
+                                </p>
+                            </td>
+                            <td>
+                                <p><strong>
+                                    <?php
+                                        if ($data['characterSex'] == '0') {
+                                            echo "женат на";
+                                        }elseif($data['characterSex'] == '1'){
+                                            echo "замужем за";
+                                        }else{
+                                            echo null;
+                                        }
+                                    ?>
+                                </strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['dateofadd']?></p>
+                            </td>
+                            <td>
+                                <p><strong>
+                                    <?php
+                                        if ($data['characterSex'] == '0') {
+                                            echo "Вступил в гильдию";
+                                        }elseif($data['characterSex'] == '1'){
+                                            echo "Вступила в гильдию";
+                                        }else{
+                                            echo null;
+                                        }
+                                    ?>
+                                </strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['otherCharacters']?></p>
+                            </td>
+                            <td>
+                                <p><strong>Второстепенные персонажи</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="userPageImdeator"><?=$data['reborn']?></p>
+                            </td>
+                            <td>
+                                <p><strong>Перерождение</strong></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div> <!-- End column1 -->
+            </div>
+        </div>

@@ -1,0 +1,16 @@
+.cbalink{display: none;}
+#bottom-container {
+    background: url(images/bottom.jpg) repeat-x;
+   padding-top: 30px;
+    border-bottom: 1px dotted #8a8571; 
+}
+
+#secondary .inside {padding: 0 30px 30px 30px;}
+
+#tertiary .inside {padding: 0 30px 30px 30px;}
+
+.front #secondary, .front #tertiary,
+.sales #secondary, .sales #tertiary,
+.news #secondary, .news #tertiary {overflow: hidden; clear: none; margin-top: -30px;}
+
+#secondary, #tertiary {overflow: hidden; clear: none;}
